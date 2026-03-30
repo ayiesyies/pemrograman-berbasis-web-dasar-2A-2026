@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!--pengatur halaman-->
+<title>Curriculum Vitae</title><!--judul yang muncul di website-->
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+}
+
+h1{
+text-align:center;
+}
+
+h2{
+text-align:center;
+}
+
+table{
+width:80%;
+margin:auto;
+border-collapse:collapse;
+}
+
+td, th{
+border:1px solid black;
+padding:10px;
+}
+
+.section{
+font-weight:bold;
+background:#f2f2f2;
+text-align:center;
+}
+
+.nav{
+text-align:center;
+}
+
+.photo{
+text-align:center;
+}
+ 
+</style>
+
+</head>
+
+<body>
+
+<h1>Curriculum Vitae</h1>
+
+<table>
+
+    <tr class="section">
+        <td colspan="2">Personal Information</td>
+    </tr>
+
+    <tr>
+
+    <td width="200" class="photo">
+        <img src="foto.jpg" width="120"><br>
+    </td>
+
+    <td>
+        <b>Nama:</b> Nur Aisyah Risky Junita <br>
+        <b>No Telepon:</b> 081233127207 <br>
+        <b>Email:</b> nuraisyahriskyjunita@email.com <br>
+        <b>Alamat:</b> Jl. Trunojoyo Bangkalan <br><br>
+
+        <b>Deskripsi Diri:</b><br>
+        Saya adalah mahasiswa yang memiliki minat pada bidang teknologi dan pengembangan perangkat lunak.
+        Saya memiliki kemampuan dasar dalam pemrograman web dan selalu berusaha meningkatkan
+        keterampilan saya melalui berbagai pengalaman belajar dan praktik.
+    </td>
+
+    </tr>
+
+</table>
+
+<hr>
+
+<h2>Education Level</h2>
+
+<table>
+
+    <tr>
+        <th>Nama Sekolah</th>
+        <th>Alamat</th>
+        <th>Jurusan</th>
+        <th>Prestasi</th>
+        <th>Tahun Masuk</th>
+    </tr>
+
+    <tr>
+        <td>SMK Negeri 2 Bangkalan</td>
+        <td>Jl. Halim Perdana Kusuma, Kelurahan Mlajah, Kec. Bangkalan, Kabupaten Bangkalan, Jawa Timur.</td>
+        <td>Rekayasa Perangkat Lunak</td>
+        <td>-</td>
+        <td>2022 - 2025</td>
+    </tr>
+
+    <tr>
+        <td>Universitas Trunojoyo Madura</td>
+        <td>Jalan Raya Telang, PO BOX 02, Kecamatan Kamal, Kabupaten Bangkalan, Pulau Madura, Jawa Timur.</td>
+        <td>Sistem Informasi</td>
+        <td>-</td>
+        <td>2025 - Sekarang</td>
+    </tr>
+
+</table>
+
+<hr>
+
+<h2>Work Experience</h2>
+
+<table>
+
+    <tr>
+        <th>Nama Perusahaan</th>
+        <th>Deskripsi</th>
+        <th>Tahun</th>
+        <th>Jobdesk</th>
+    </tr>
+
+    <tr>
+    <td>Universitas Noor Huda Mustofa</td>
+    <td>Instansi pendidikan</td>
+    <td>2024 - 2025</td>
+
+    <td>
+    <ul>
+    <li>Membantu pengembangan website Sistem Informasi akademik dengan menambahkan fitur atau melakukan perbaikan sederhana</li>
+    <li>Mengoperasikan sistem ujian TOEFL mahasiswa selama pelaksanaan ujian.</li>
+    <li>Memberikan bantuan teknis jika terjadi kendala saat penggunaan sistem komputer</li>
+    </ul>
+    </td>
+
+    </tr>
+
+</table>
+
+<hr>
+
+<h2>Organisational Experience</h2>
+
+<table>
+
+    <tr>
+    <th>Nama Organisasi</th>
+    <th>Deskripsi</th>
+    <th>Divisi</th>
+    <th>Tahun</th>
+    <th>Jobdesk</th>
+    </tr>
+
+    <tr>
+    <td>ITC</td>
+    <td>Organisasi Mahasiswa</td>
+    <td>Humas</td>
+    <td>2025</td>
+
+    <td>
+    <ul>
+    <li>Mencari sponsor</li>
+    <li>Membantu kegiatan acara</li>
+    </ul>
+    </td>
+
+    </tr>
+
+</table>
+
+<hr>
+
+<h2>Skills, Achievements & Other Experience</h2>
+
+<table>
+
+    <tr>
+    <td>
+
+    <ul>
+    <li> Dasar HTML</li>
+    <li>MySQL</li>
+    <li>Menulis cerita pendek</li>
+    </ul>
+    <hr>
+
+
+    </td>
+    </tr>
+
+</table>
+
+<hr>
+
+<div class="nav">
+<a href="college.html">College Experience</a> |
+<a href="books.html">Book Collection</a>
+</div>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>College experience </title>
+
+<style>
+
+body{
+text-align:center;
+font-family: Arial;
+}
+
+h1{
+text-align:center;
+}
+
+.nav{
+text-align:center;
+}
+
+table{
+border-collapse:collapse;
+margin:auto;
+}
+
+table, th, td{
+border:1px solid black;
+padding:8px;
+}
+
+ul{
+display:inline-block;
+text-align:left;
+}
+
+form{
+display:inline-block;
+text-align:left;
+}
+
+</style>
+
+</head>
+<body>
+
+<h1>College Experience</h1>
+
+<table>
+<tr>
+    <th>Nama</th>
+    <th>NIM</th>
+    <th>Email</th>
+    <th>Alamat</th>
+</tr>
+
+<tr>
+    <td>Nur Aisyah Risky Junita</td>
+    <td>250441100041</td>
+    <td>nuraisyahriskyjunita@gmail.com</td>
+    <td>Jl.Trunojoyo Bangkalan</td>
+</tr>
+</table>
+
+<h2>Hobi dan Minat</h2>
+
+    <ul>
+        <li>Mendengarkan musik</li>
+        <li>Belajar coding</li>
+        <li>Membaca buku</li>
+    </ul>
+
+<h2>Form Skill</h2>
+
+<form>
+
+Bahasa Pemrograman :
+<input type="text"><br><br>
+
+Bahasa Asing :
+<input type="text"><br><br>
+
+Perangkat Lunak :
+<input type="checkbox"> VS Code
+<input type="checkbox"> XAMPP
+<input type="checkbox"> Figma
+<br><br>
+
+Sistem Operasi :
+<input type="radio" name="os"> Windows
+<input type="radio" name="os"> Linux
+<input type="radio" name="os"> MacOS
+<br><br>
+
+<input type="submit" value="Submit">
+
+</form>
+
+<h2>Pengalaman Kuliah</h2>
+
+<p>
+Saat pertama kali masuk kuliah saya merasa sangat senang karena dapat mempelajari banyak hal baru di bidang teknologi.
+</p>
+
+<p>
+Selama kuliah saya mempelajari berbagai mata kuliah seperti pemrograman web, basis data, dan sistem informasi.
+</p>
+
+<p>
+Saya juga menghadapi beberapa tantangan seperti memahami framework dan manajemen waktu antara tugas dan kegiatan lain.
+</p>
+
+<p>
+saya juga berpengalaman kepanitiaan menjadi sie humas di acara Makasi 2025
+</p>
+
+<hr>
+
+<div class="nav">
+<a href="cv.html">Curriculum Vitae</a> |
+<a href="books.html">Book Collection</a>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Book collection</title>
+
+<style>
+h1{
+text-align:center;
+}
+
+table{
+margin:auto;
+border-collapse:collapse;
+width:80%;
+}
+
+table, th, td{
+border:1px solid black;
+}
+
+td{
+text-align:center;
+vertical-align:middle;
+padding:8px;
+}
+
+th{
+padding:8px;
+}
+
+.nav{
+text-align:center;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Book Collection</h1>
+
+<table>
+
+<tr>
+    <th width="150">Gambar Buku</th>
+    <th>Detail Buku</th>
+    <th>Kutipan (Quotes)</th>
+    </tr>
+
+<tr>
+<td>
+<img src="buku1.jpg" width="120">
+</td>
+
+<td>
+    <b>Judul:</b> Antares <br>
+    <b>Penulis:</b> Rweinda <br>
+    <b>Penerbit:</b> Loveable <br>
+    <b>Tahun:</b> 2020
+    </td>
+
+<td>
+“Tidak semua orang yang terlihat kuat benar-benar tidak pernah terluka.”
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="buku2.jpg" width="120">
+</td>
+
+<td>
+    <b>Judul:</b> Dia Angkasa <br>
+    <b>Penulis:</b> Nurwina Sari <br>
+    <b>Penerbit:</b> Romancious <br>
+    <b>Tahun:</b> 2021
+</td>
+
+<td>
+“Kadang orang yang terlihat paling kuat justru menyimpan luka paling dalam.”
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="buku5.jpg" width="120">
+</td>
+
+<td>
+    <b>Judul:</b> Koala Kumal <br>
+    <b>Penulis:</b> Raditya Dika <br>
+    <b>Penerbit:</b> Gagas Media <br>
+    <b>Tahun:</b> 2014
+</td>
+
+<td>
+“Kadang yang membuat kita sedih bukan kehilangan orangnya, tapi kenangannya.”
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="buku3.jpg" width="120">
+</td>
+
+<td>
+    <b>Judul:</b> Kisah Perjuangan dan Inspirasi B.J.Habibi <br>
+    <b>Penulis:</b> Weda S. Atma <br>
+    <b>Penerbit:</b> Checklist <br>
+    <b>Tahun:</b> 2018
+</td>
+
+<td>
+“Kesuksesan tidak datang dengan mudah, tetapi melalui kerja keras dan ketekunan.”
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="buku4.jpg" width="120">
+</td>
+
+<td>
+    <b>Judul:</b> Buya Hamka Teladan dan Inspirasi Penuh Talenta <br>
+    <b>Penulis:</b> Dadi Purnama Eksan <br>
+    <b>Penerbit:</b> C-Klik Media <br>
+    <b>Tahun:</b> 2020
+</td>
+
+<td>
+“Perjuangan Buya Hamka menunjukkan bahwa ilmu, iman, dan akhlak harus berjalan bersama dalam kehidupan.”
+</td>
+</tr>
+
+</table>
+
+<hr>
+
+<div class="nav">
+<a href="cv.html">Curriculum Vitae</a> |
+<a href="college.html">College Experience</a>
+</div>
+
+</body>
+</html>
+
+
+
