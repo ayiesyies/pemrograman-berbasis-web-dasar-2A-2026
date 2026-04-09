@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Photocard Store</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+    <h1>Album BTS Store</h1>
+    <p>Koleksi Album Original & Berkualitas</p>
+</header>
+
+<nav>
+    <a href="#produk">Produk</a>
+    <a href="#tentang">Tentang</a>
+</nav>
+
+<section class="produk" id="produk">
+
+    <div class="produk-container">
+
+        <div class="produk-box">
+            <img src="album.jpg" alt="Photocard BTS">
+
+            <h3>Proof</h3>
+
+            <p>
+                "Album antologi yang merangkum sejarah perjalanan karier dan karya-karya terbaik dalam satu koleksi eksklusif."
+            </p>
+            <p>
+                Tanggal Rilis: 10 Juni 2022
+            </p>
+
+            <a href="#" class="btn">Beli Sekarang</a>
+        </div>
+
+        <div class="produk-box">
+            <img src="album1.jpg" alt="Photocard Blackpink">
+
+            <h3>Love Yourself: Answer</h3>
+
+            <p>
+               "Seri album ikonik yang membawa pesan mendalam tentang mencintai diri sendiri dengan desain cover yang estetik."
+            </p>
+            <p>
+                Tanggal Rilis: 24 Agustus 2018
+            </p>
+
+            <a href="#" class="btn">Beli Sekarang</a>
+        </div>
+
+        <div class="produk-box">
+            <img src="download (1).jpg" alt="Photocard NewJeans">
+
+            <h3>Map of the Soul: Persona</h3>
+
+            <p>
+               "Album yang mengeksplorasi jati diri dengan nuansa visual merah muda yang ceria dan koleksi foto yang sangat artistik."
+            </p>
+            <p>
+                Tanggal Rilis: 12 April 2019
+            </p>
+
+            <a href="#" class="btn">Beli Sekarang</a>
+        </div>
+
+        <div class="produk-box">
+            <img src="download.jpg" alt="Photocard NewJeans">
+
+            <h3>Butter</h3>
+
+            <p>
+                "Edisi album musim panas yang energik, dilengkapi dengan pernak-pernik koleksi yang berwarna cerah dan unik."
+            </p>
+            <p>
+                Tanggal Rilis: 9 Juli 2021
+            </p>
+
+            <a href="#" class="btn">Beli Sekarang</a>
+        </div>
+
+        <div class="produk-box">
+            <img src="album4.jpg" alt="Photocard NewJeans">
+
+            <h3>The Most Beautiful Moment in Life: Young Forever</h3>
+
+            <p>
+                "Album spesial edisi penutup masa muda yang berisi lagu-lagu emosional dan konsep foto outdoor yang legendaris."
+            </p>
+            <p>
+                Tanggal Rilis: 2 Mei 2016
+            </p>
+
+            <a href="#" class="btn">Beli Sekarang</a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="tentang" id="tentang">
+
+    <h2>Keunggulan Toko Kami</h2>
+
+    <div class="fitur-container">
+
+        <div class="fitur-box">
+            <h3>Original</h3>
+            <p>Semua album dijamin original.</p>
+        </div>
+
+        <div class="fitur-box">
+            <h3>Aman</h3>
+            <p>Dikemas dengan pelindung khusus.</p>
+        </div>
+
+        <div class="fitur-box">
+            <h3>Terpercaya</h3>
+            <p>Sudah dipercaya banyak kolektor.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Album BTS Store</p>
+</footer>
+
+</body>
+</html>
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5ff;
+    color: #333;
+}
+
+header {
+    background-color: #7b2cbf;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav {
+    background-color: white;
+    padding: 12px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 15px;
+    color: #333;
+    font-weight: bold;
+}
+
+.produk {
+    padding: 60px 20px;
+    background-color: #e0aaff;
+    text-align: center;
+}
+
+.produk-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.produk-box {
+    width: 230px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.produk-box img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.produk-box h3 {
+    margin-top: 15px;
+    color: #7b2cbf;
+}
+
+.produk-box p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.btn {
+    margin-top: 15px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #7b2cbf;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.tentang {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.tentang h2 {
+    margin-bottom: 30px;
+}
+
+.fitur-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.fitur-box {
+    width: 200px;
+    padding: 20px; 
+    background-color: #ffd6ff;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #7b2cbf;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 40px;
+}
