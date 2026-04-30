@@ -1,0 +1,340 @@
+/* PORTOFOLIO */
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya | Minimalis & Profesional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+      
+    </style>
+</head>
+<body class="bg-white text-slate-900 font-sans">
+
+    <nav class="top-0 z-50 bg-white border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-blue-600 tracking-tight">
+                Nur Aisyah Risky Junita.
+            </h1>
+            <div class="md:flex space-x-8 text-sm font-medium">
+                <a href="#home" class="hover:text-blue-600 transition">Home</a>
+                <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+            </div> 
+            <button class="md:hidden text-slate-600 p-2"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <header id="home" class="py-20 md:py-32 bg-slate-50/50">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row-reverse items-center gap-12">
+            
+            <div class="flex-none">
+                <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white shadow-md ring-1 ring-slate-100">
+                    <img src="foto.jpeg" alt="Profile" class="w-full h-full object-center">
+                </div>
+            </div>
+
+            <div class="flex-1 space-y-6 text-center md:text-left">
+                <span class="inline-block px-4 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-semibold tracking-wider uppercase">
+                    Information Systems Student
+                </span>
+                <h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter leading-tight text-slate-950">
+                    Sedang belajar membuat website yang sederhana dan bermanfaat.
+                </h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto md:mx-0">
+                    Halo! Saya Nur Aisyah Risky Junita, mahasiswa semester 2 Program Studi Sistem Informasi di Universitas Trunojoyo Madura. Saat ini saya sedang belajar membuat website menggunakan HTML, dan CSS.
+                </p>
+                <div class="pt-4 flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="#projects" class="px-7 py-3 bg-slate-900 text-white rounded-lg font-semibold hover:bg-slate-800 transition text-sm">Lihat Portfolio</a>
+                    <a href="#contact" class="px-7 py-3 bg-white border border-slate-200 rounded-lg font-semibold hover:bg-slate-50 transition text-sm text-slate-800 shadow-sm">Hubungi Saya</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="projects" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold tracking-tight text-slate-950">Featured Projects</h3>
+                <p class="text-slate-600 mt-2">Kumpulan karya terba ik saya.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl border border-slate-100 p-5">
+                    <div class="aspect-[16/10] bg-slate-100 rounded-xl mb-5 overflow-hidden border border-slate-100/50">
+                        <img src="project2.png" alt="Project" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <h4 class="text-lg font-semibold text-slate-950">Website Profil Kecamatan</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed line-clamp-2">Website profil kecamatan yang menampilkan informasi umum, gambar, dan deskripsi wilayah secara sederhana.</p>
+                        
+                        <div class="flex flex-wrap gap-2 pt-1">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs rounded-md font-medium">html</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs rounded-md font-medium">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-100 p-5">
+                    <div class="aspect-[16/10] bg-slate-100 rounded-xl mb-5 overflow-hidden border border-slate-100/50">
+                        <img src="project1 (1).png" alt="Project" class="w-full h-full object-cover">
+                    </div>
+                    <div class="space-y-3">
+                        <h4 class="text-lg font-semibold text-slate-950">Website Curriculum Vitae</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed line-clamp-2">Website CV sederhana yang menampilkan data diri, pendidikan, dan pengalaman secara terstruktur.</p>
+                        <div class="flex flex-wrap gap-2 pt-1">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs rounded-md font-medium">html</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs rounded-md font-medium">css</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="bg-white rounded-2xl border border-slate-100 p-5">
+                    <div class="aspect-[16/10] bg-slate-100 rounded-xl mb-5 overflow-hidden border border-slate-100/50">
+                        <img src="project1 (2).png" alt="Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="space-y-3">
+                        <h4 class="text-lg font-semibold text-slate-950">Website Katalog Produk</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed line-clamp-2">Website katalog produk sederhana untuk menampilkan daftar barang dalam bentuk kartu produk.</p>
+                        <div class="flex flex-wrap gap-2 pt-1">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs rounded-md font-medium">html</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs rounded-md font-medium">css</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <section id="contact" class="py-24 bg-slate-50">
+
+<div class="max-w-3xl mx-auto px-6 text-center">
+
+<h3 class="text-3xl font-bold mb-6">
+Kontak Saya
+</h3>
+
+<p class="text-slate-600 mb-10">
+Jika ingin menghubungi saya, silakan melalui kontak berikut.
+</p>
+
+    <div class="space-y-4 text-lg">
+
+        <p>
+        📱 <span class="font-semibold">Nomor HP:</span>
+        081233127207
+        </p>
+
+        <p>
+        📧 <span class="font-semibold">Email:</span>
+        nuraisyahriskyjunita@gmail.com
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+    <footer class="py-10 bg-white border-t border-slate-100 text-sm text-slate-500">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p>© 2026 By Me. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
+/* KECAMATAN */
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Profile Kecamatan</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <nav class="bg-[#285A48] text-white p-4">
+        <div class="container mx-auto flex justify-between">
+
+            <h1 class="font-bold text-xl">
+                Kecamatan Ketanggungan
+            </h1>
+
+            <ul class="flex gap-6">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#potensi">Potensi</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <section id="home"
+             class="flex items-center justify-center min-h-screen text-white bg-cover bg-center"
+             style="background-image: url('pp1.jpg');">
+
+        <div class="text-center">
+
+            <h1 class="text-4xl font-bold mb-4">
+                Selamat Datang di  
+                Kecamatan Pronojiwo
+            </h1>
+
+            <p>
+                Kecamatan yang maju dan berkembang.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section id="about" class="p-10">
+
+        <h2 class="text-3xl font-bold text-center mb-8">
+            Tentang Kecamatan
+        </h2>
+
+        <div class="grid grid-cols-2 gap-8">
+
+            <div>
+                <h3 class="font-bold mb-2">
+                    Sejarah
+                </h3>
+
+                <p>
+                    Kecamatan Pronojiwo berasal dari wilayah yang dahulu
+                    bernama Desa Kalibening. Pada tahun 1952, nama tersebut
+                    diubah menjadi Pronojiwo karena wilayah ini memiliki
+                    banyak sumber air jernih.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="font-bold mb-2">
+                    Letak Geografis
+                </h3>
+
+                <p>
+                    Kecamatan Pronojiwo terletak di Kabupaten Lumajang,
+                    Provinsi Jawa Timur, dengan luas sekitar 38,74 km².
+                    Wilayah ini berada di lereng selatan Gunung Semeru
+                    dan berbatasan dengan Kecamatan Candipuro,
+                    Tempursari, serta Kabupaten Malang.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="potensi"
+             class="bg-gray-200 p-10">
+
+        <h2 class="text-3xl font-bold text-center mb-8">
+            Potensi Daerah
+        </h2>
+
+        <div class="grid grid-cols-3 gap-6">
+
+            <div class="bg-white p-4 shadow rounded">
+                <h3 class="font-bold">
+                    Pertanian
+                </h3>
+
+                <p>
+                    Menghasilkan padi dan sayuran.
+                </p>
+            </div>
+
+            <div class="bg-white p-4 shadow rounded">
+                <h3 class="font-bold">
+                    Umkm
+                </h3>
+
+                <p>
+                    Berbagai usaha kecil berkembang.
+                </p>
+            </div>
+
+            <div class="bg-white p-4 shadow rounded">
+                <h3 class="font-bold">
+                    Wisata
+                </h3>
+
+                <p>
+                    Memiliki beberapa tempat wisata menarik.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="galeri"
+             class="p-10">
+
+        <h2 class="text-3xl font-bold text-center mb-8">
+            Galeri
+        </h2>
+
+        <div class="grid grid-cols-3 gap-6">
+
+            <img src="petani1.jpg" class="w-full h-48 object-cover rounded shadow" alt="Pertanian">
+            <img src="umkm1.jpg" class="w-full h-48 object-cover rounded shadow" alt="UMKM">
+            <img src="airterjun.jpg" class="w-full h-48 object-cover rounded shadow" alt="wisata">
+
+            <img src="petani2.jpg" class="w-full h-48 object-cover rounded shadow" alt="Pertanian">
+            <img src="umkm2.jpg" class="w-full h-48 object-cover rounded shadow" alt="UMKM">
+            <img src="arterjun2.jpg" class="w-full h-48 object-cover rounded shadow" alt="">
+
+        </div>
+
+    </section>
+
+    <section id="contact"
+             class="bg-[#285A48] text-white p-10">
+
+        <h2 class="text-3xl font-bold text-center mb-8">
+            Kontak
+        </h2>
+
+        <div class="flex justify-center gap-10">
+
+            <div>
+                📍 Alamat:  
+                Kabupaten Lumajang, Provinsi Jawa Timur
+            </div>
+
+            <div>
+                📞 Telepon:  
+                (0283) 123456
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer
+        class="text-center p-4 bg-gray-800 text-white">
+
+        © 2026 Kecamatan Ketanggungan
+
+    </footer>
+
+</body>
+</html>
