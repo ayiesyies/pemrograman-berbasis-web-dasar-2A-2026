@@ -1,0 +1,402 @@
+//index.php
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Interaktif Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-8">
+
+    <div class="max-w-4xl mx-auto space-y-10">
+        
+        <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-4 text-gray-800 border-b pb-2">Profil Interaktif Developer</h2>
+            <table class="w-full text-left border-collapse">
+                <tr class="border-b">
+                    <th class="py-2 text-gray-600">Nama</th>
+                    <td>Nur Aisyah Risky Junita</td>
+                </tr>
+                <tr class="border-b">
+                    <th class="py-2 text-gray-600">ID Developer</th>
+                    <td>DEV-2026-001</td>
+                </tr>
+                <tr class="border-b">
+                    <th class="py-2 text-gray-600">Kota/Tgl Lahir</th>
+                    <td>Surabaya, 14 Juni 2006</td>
+                </tr>
+                <tr class="border-b">
+                    <th class="py-2 text-gray-600">Email</th>
+                    <td>nuraisyahriskyjunita@email.com</td>
+                </tr>
+                <tr>
+                    <th class="py-2 text-gray-600">No. WhatsApp</th>
+                    <td>0812-3312-7207</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-4 text-gray-800">Update Data Kemampuan</h2>
+            <form action="" method="POST" class="space-y-4">
+                
+                <div>
+                    <label class="block font-medium">Framework/Tools (Pisahkan dengan koma):</label>
+                    <input type="text" name="frameworks" placeholder="Laravel, Tailwind, React" class="w-full p-2 border rounded" required>
+                </div>
+
+                <div>
+                    <label class="block font-medium">Pengalaman Pembuatan Aplikasi:</label>
+                    <textarea name="pengalaman" rows="3" class="w-full p-2 border rounded" required></textarea>
+                </div>
+
+                <div>
+                    <label class="block font-medium">Tools Penunjang:</label>
+                    <div class="flex gap-4 flex-wrap">
+                        <label><input type="checkbox" name="tools[]" value="VS Code"> VS Code</label>
+                        <label><input type="checkbox" name="tools[]" value="GitHub"> GitHub</label>
+                        <label><input type="checkbox" name="tools[]" value="Figma"> Figma</label>
+                        <label><input type="checkbox" name="tools[]" value="Postman"> Postman</label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block font-medium">Minat Bidang:</label>
+                    <div class="flex gap-4">
+                        <label><input type="radio" name="minat" value="Frontend" required> Frontend</label>
+                        <label><input type="radio" name="minat" value="Backend"> Backend</label>
+                        <label><input type="radio" name="minat" value="Fullstack"> Fullstack</label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block font-medium">Tingkat Skill Coding:</label>
+                    <select name="level" class="w-full p-2 border rounded" required>
+                        <option value="">-- Pilih Level --</option>
+                        <option value="Dasar">Dasar</option>
+                        <option value="Cukup">Cukup</option>
+                        <option value="Profesional">Profesional</option>
+                    </select>
+                </div>
+
+                <button type="submit" name="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Proses Data</button>
+            </form>
+        </section>
+
+        <?php
+        if (isset($_POST['submit'])) {
+
+            if (
+                !empty($_POST['frameworks']) && 
+                !empty($_POST['pengalaman']) && 
+                !empty($_POST['minat']) && 
+                !empty($_POST['level']) &&
+                !empty($_POST['tools'])
+            ) {
+                
+                $fw_array = explode(",", $_POST['frameworks']);
+                $jumlah_fw = count($fw_array);
+                
+                $tools = implode(", ", $_POST['tools']);
+
+                echo "<section class='bg-green-50 p-6 rounded-lg border border-green-200 shadow-md'>";
+                echo "<h2 class='text-xl font-bold mb-4 text-green-800'>Hasil Output Form</h2>";
+                
+                if ($jumlah_fw > 2) {
+                    echo "<div class='bg-green-200 text-green-800 p-3 rounded mb-4 font-bold text-center'>
+                            Skill Anda cukup luas di bidang development!
+                          </div>";
+                }
+
+                echo "<table class='w-full mb-6'>";
+                echo "<tr><th class='text-left w-1/3 py-1'>Minat Bidang</th><td>: " . htmlspecialchars($_POST['minat']) . "</td></tr>";
+                echo "<tr><th class='text-left py-1'>Level Skill</th><td>: " . htmlspecialchars($_POST['level']) . "</td></tr>";
+                echo "<tr><th class='text-left py-1'>Frameworks</th><td>: " . implode(" | ", array_map('trim', $fw_array)) . "</td></tr>";
+                echo "<tr><th class='text-left py-1'>Tools Penunjang</th><td>: " . htmlspecialchars($tools) . "</td></tr>";
+                echo "</table>";
+
+                echo "<h3 class='font-bold mb-1 text-gray-700'>Cerita Pengalaman:</h3>";
+                echo "<p class='italic text-gray-600 border-l-4 border-green-400 pl-4 bg-white p-3 rounded'>" . nl2br(htmlspecialchars($_POST['pengalaman'])) . "</p>";
+                echo "</section>";
+
+            } else {
+                echo "<div class='bg-red-100 text-red-700 p-4 rounded shadow'>
+                        <strong>Gagal:</strong> Mohon isi semua input yang wajib!
+                      </div>";
+            }
+        }
+        ?>
+
+        <div class="mt-10 pb-10 flex justify-center gap-4">
+            <a href="timeline.php" class="bg-indigo-600 text-white px-6 py-2 rounded shadow hover:bg-indigo-700 transition">
+                Lihat Timeline Belajar &rarr;
+            </a>
+            <a href="blog.php" class="bg-gray-600 text-white px-6 py-2 rounded shadow hover:bg-gray-700 transition">
+                Kunjungi Blog
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+//timeline.php
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline Perjalanan Belajar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .timeline-line {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #e5e7eb;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 13px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 4px solid white;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 p-8">
+
+<div class="max-w-2xl mx-auto">
+
+    <h1 class="text-3xl font-bold text-center mb-10 text-gray-800">
+        Timeline Perjalanan Belajar Coding
+    </h1>
+
+    <?php
+    $riwayat_belajar = [
+        [
+            "tahun" => 2025,
+            "event" => "Masuk Kuliah Jurusan Sistem Informasi",
+            "deskripsi" => "Mulai mengenal dunia teknologi dan dasar-dasar algoritma."
+        ],
+        [
+            "tahun" => 2026,
+            "event" => "Belajar HTML, CSS, dan Desain",
+            "deskripsi" => "Memahami struktur website dan membuat tampilan responsif."
+        ],
+        [
+            "tahun" => 2027,
+            "event" => "Belajar PHP & MySQL",
+            "deskripsi" => "Mulai membuat website dinamis dan mengelola database."
+        ],
+        [
+            "tahun" => 2028,
+            "event" => "Membuat Website Portofolio",
+            "deskripsi" => "Berhasil membuat website portofolio menggunakan Tailwind CSS."
+        ],
+        [
+            "tahun" => 2029,
+            "event" => "Target Lulus & Jadi Developer",
+            "deskripsi" => "Siap masuk dunia kerja sebagai Fullstack Developer."
+        ]
+    ];
+
+    function beriPenekanan($tahun, $teks) {
+        if ($tahun == 2026) {
+            return "<span class='text-blue-600 font-bold'>$teks ⭐</span>";
+        } else {
+            return "<span class='text-gray-800'>$teks</span>";
+        }
+    }
+    ?>
+
+    <div class="relative space-y-8">
+        <div class="timeline-line"></div>
+
+        <?php foreach ($riwayat_belajar as $item): ?>
+            <div class="relative pl-12">
+
+                <div class="timeline-dot mt-1.5 
+                    <?php 
+                        if ($item['tahun'] == 2026) {
+                            echo 'bg-blue-600 scale-125';
+                        } else {
+                            echo 'bg-blue-400';
+                        }
+                    ?>">
+                </div>
+
+                <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition">
+
+                    <span class="text-sm text-blue-500 font-bold">
+                        <?php echo $item['tahun']; ?>
+                    </span>
+
+                    <h3 class="text-lg mt-1">
+                        <?php echo beriPenekanan($item['tahun'], $item['event']); ?>
+                    </h3>
+
+                    <p class="text-gray-600 mt-2 text-sm leading-relaxed">
+                        <?php echo $item['deskripsi']; ?>
+                    </p>
+
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+
+    <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+
+        <a href="index.php"
+           class="bg-gray-800 text-white px-6 py-3 rounded-full text-center hover:bg-gray-900 transition shadow-lg">
+            ← Kembali ke Profil
+        </a>
+
+        <a href="blog.php"
+           class="bg-blue-600 text-white px-6 py-3 rounded-full text-center hover:bg-blue-700 transition shadow-lg">
+            Menuju Blog Developer →
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+
+
+//blog.php
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Reflektif Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-8">
+
+<div class="max-w-5xl mx-auto">
+    <header class="text-center mb-12">
+        <h1 class="text-4xl font-extrabold text-gray-900">Blog Reflektif Developer</h1>
+        <p class="text-gray-600 mt-2">Berbagi cerita dan inspirasi dalam dunia coding.</p>
+    </header>
+
+<?php
+$artikel = [
+    "html-dasar" => [
+        "judul" => "Belajar HTML Pertama Kali",
+        "tanggal" => "10 Februari 2024",
+        "isi" => "Awalnya saya mengira coding itu sangat sulit, namun setelah membuat struktur 'Hello World' dengan HTML, saya merasa sangat puas.",
+        
+        "gambar" => "https://images.unsplash.com/photo-1518770660439-4636190af475",
+        
+        "link" => "https://www.w3schools.com/html/"
+    ],
+    "error-pertama" => [
+        "judul" => "Menghadapi Error Pertama",
+        "tanggal" => "25 Maret 2024",
+        "isi" => "Lupa titik koma atau tanda kutip bisa bikin error. Ini ngajarin saya buat teliti.",
+        
+        "gambar" => "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
+        
+        "link" => "https://stackoverflow.com"
+    ],
+    "logic-php" => [
+        "judul" => "Memahami Logika PHP",
+        "tanggal" => "05 April 2025",
+        "isi" => "Perulangan dan percabangan bikin web jadi dinamis dan lebih hidup.",
+        
+        "gambar" => "https://images.unsplash.com/photo-1526378722484-bd91ca387e72",
+        
+        "link" => "https://www.php.net/manual/en/tutorial.php"
+    ]
+];
+
+$quotes = [
+    "Coding adalah seni memecahkan masalah.",
+    "Setiap ahli dulunya adalah pemula.",
+    "Error adalah guru terbaik.",
+    "Ngoding itu proses, bukan instan."
+];
+$random_quote = $quotes[array_rand($quotes)];
+
+$id_terpilih = $_GET['id'] ?? null;
+?>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+    <aside>
+        <h2 class="text-xl font-bold mb-4">Daftar Artikel</h2>
+
+        <?php foreach ($artikel as $id => $data): ?>
+            <a href="?id=<?= $id ?>" 
+               class="block p-4 mb-2 bg-white rounded shadow hover:bg-blue-50
+               <?= ($id == $id_terpilih) ? 'border-l-4 border-blue-500' : '' ?>">
+                <?= $data['judul'] ?>
+            </a>
+        <?php endforeach; ?>
+
+        <div class="mt-6 p-4 bg-indigo-600 text-white rounded-xl">
+            <i>"<?= $random_quote ?>"</i>
+        </div>
+    </aside>
+
+    <main class="col-span-2">
+        <?php if ($id_terpilih && isset($artikel[$id_terpilih])): 
+            $konten = $artikel[$id_terpilih];
+        ?>
+
+        <div class="bg-white p-6 rounded-xl shadow">
+
+
+            <img src="<?= $konten['gambar']; ?>" 
+                 onerror="this.src='https://via.placeholder.com/800x400?text=Gambar+Tidak+Ditemukan';"
+                 class="w-full h-64 object-cover rounded mb-4">
+
+            <h2 class="text-2xl font-bold"><?= $konten['judul']; ?></h2>
+            <p class="text-sm text-gray-500 mb-4">Diposting: <?= $konten['tanggal']; ?></p>
+
+            <p class="text-gray-700 mb-6"><?= $konten['isi']; ?></p>
+
+            <a href="<?= $konten['link']; ?>" target="_blank" 
+               class="text-blue-600 hover:underline">
+               Baca Referensi →
+            </a>
+
+        </div>
+
+        <?php else: ?>
+            <div class="text-center text-gray-400 p-10 border-2 border-dashed rounded">
+                Pilih artikel di samping
+            </div>
+        <?php endif; ?>
+    </main>
+    
+</div>
+<div class="mt-10 pb-10 flex justify-center gap-4">
+    <a href="timeline.php" class="bg-indigo-600 text-white px-6 py-2 rounded shadow hover:bg-indigo-700 transition">
+        &larr; Kembali ke Timeline
+    </a>
+    <a href="index.php" class="bg-gray-600 text-white px-6 py-2 rounded shadow hover:bg-gray-700 transition">
+        Menuju ke Profil
+    </a>
+</div>
+
+
+</div>
+
+</body>
+</html>
